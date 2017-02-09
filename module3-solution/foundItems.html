@@ -1,0 +1,16 @@
+<table class="table" ng-show="foundItems.items.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in foundItems.items">
+      <td>{{item.short_name}}</td>
+      <td>{{item.description}}</td>
+      <td><button class="btn btn-default" ng-click="foundItems.onRemove({index: $index});">
+      <span class="glyphicon glyphicon-ok"></span> Don't want this one!</button></td>
+    </tr>
+  </tbody
+</table>
