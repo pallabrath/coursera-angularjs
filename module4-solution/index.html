@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Restaurant Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <!-- Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+  <!-- Modules -->
+  <script src="js/data.module.js"></script>
+  <script src="js/MenuApp.module.js"></script>
+  <script src="spinner/spinner.module.js"></script>
+  <!-- data stuffs -->
+  <script src="js/menudata.service.js"></script>
+  <!-- MenuApp stuffs -->
+  <script src="js/categories.component.js"></script>
+  <script src="js/MenuApp.controller.js"></script>
+  <script src="js/item.controller.js"></script>
+  <script src="js/items.component.js"></script>
+  <!-- Routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- 'Spinner' module artifacts -->
+  <script src="spinner/loadingspinner.component.js"></script>
+<body ng-app="MenuApp">
+    <h1>Welcome to our Restaurant</h1>
+    <ui-view></ui-view>
+</body>
+</html>
