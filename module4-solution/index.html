@@ -10,9 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
   <script src="lib/angular-ui-router.min.js"></script>
   <!-- Modules -->
+  <script src="spinner/spinner.module.js"></script>
   <script src="js/data.module.js"></script>
   <script src="js/MenuApp.module.js"></script>
-  <script src="spinner/spinner.module.js"></script>
   <!-- data stuffs -->
   <script src="js/menudata.service.js"></script>
   <!-- MenuApp stuffs -->
@@ -27,6 +27,7 @@
   <script src="spinner/loadingspinner.component.js"></script>
 <body ng-app="MenuApp">
     <h1>Welcome to our Restaurant</h1>
+    <loading-spinner></loading-spinner>
     <ui-view></ui-view>
 </body>
 </html>

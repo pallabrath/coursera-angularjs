@@ -16,7 +16,7 @@ function SpinnerController($rootScope) {
   $ctrl.$onInit = function () {
     var cancel = $rootScope.$on('$stateChangeStart',
     function(event, toState, toParams, fromState, fromParams, options){
-      $ctrl.showSpinner = true;
+      $ctrl.showSpinner = true;      
     });
     cancellers.push(cancel);
 
