@@ -1,0 +1,15 @@
+<div class="container">
+<h1>My Info</h1>
+<div class="alert alert-warning" ng-show="myInfoCtrl.notSignedUp">
+  Not Signed Up Yet.
+  <a ui-sref="public.signup"><strong>Sign up Now!</strong></a>
+</div>
+<div ng-hide="myInfoCtrl.notSignedUp">
+  First Name : {{myInfoCtrl.userDetails.firstName}}
+  <br/>Last Name : {{myInfoCtrl.userDetails.lastName}}
+  <br/>Phone : {{myInfoCtrl.userDetails.phone}}
+<br/>Email : {{myInfoCtrl.userDetails.email}}
+  <br/>Favorite Dish : <br/>
+  <menu-item menu-item="myInfoCtrl.userDetails.favDish"></menu-item>
+</div>
+</div>

@@ -1,0 +1,58 @@
+<h1>Sign Up</h1>
+<div class="alert alert-success" ng-if="signUpCtrl.showSavedMsg">
+  <strong>Success!</strong> Your information has been saved.
+</div>
+<div class="row">
+<div class="col-sm-8">
+<form name="signUpForm" novalidate>
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" class="form-control" ng-model="signUpCtrl.firstName"
+    id="firstName" name="firstName" required>
+    <span ng-if="signUpForm.firstName.$touched && signUpForm.firstName.$error.required">
+            First Name is required.
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" class="form-control" id="lastName"
+    name="lastName" ng-model="signUpCtrl.lastName" required>
+    <span ng-if="signUpForm.lastName.$touched && signUpForm.lastName.$error.required">
+            Last Name is required.
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email"
+    ng-model="signUpCtrl.email" name="email" required>
+    <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
+            Must be a valid email address: handle@domain format
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" id="phone"
+    ng-model="signUpCtrl.phone" name="phone" required>
+    <span ng-if="signUpForm.phone.$touched && signUpForm.phone.$error.required">
+            Phone is required.
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="favDish">Favorite dish (Menu short name):</label>
+    <input type="text" class="form-control" id="favDish"
+    ng-model="signUpCtrl.favDish" name="favDish" required
+    ng-blur="signUpCtrl.verifyDish()" ng-change="signUpCtrl.invalidDish = true">
+    <span ng-if="signUpForm.favDish.$touched && signUpForm.favDish.$error.required">
+            Favorite dish is required.
+    </span>
+    <span ng-if="signUpForm.favDish.$touched && signUpCtrl.invalidDish">
+            No such menu number exists.
+    </span>
+  </div>
+  <button type="submit" class="btn btn-default"
+  ng-click="signUpCtrl.signUpBtnClick()"
+  ng-disabled="signUpForm.$invalid || signUpCtrl.invalidDish">
+  Sign Up</button>
+</form>
+</div>
+</div>
